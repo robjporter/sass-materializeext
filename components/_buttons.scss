@@ -1,0 +1,50 @@
+.link-back:before{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABACAMAAACnZz6fAAAAflBMVEUAAAAAjOkAc8YAdMYAecoAdMYAc8YAdMYAc8YAc8YAd8kAd8kAfswAc8YAdMYAdMYAdMYAc8YAdMYAdMcAdcgAd8gAdskAd8kAe8wAe9AAgtAAc8YAc8YAdMYAc8YAdcgAdccAdckAdcgAdMcAdMYAdMYAdMcAdMUAd8YAc8XwTFXoAAAAKXRSTlMABPrOG+3c6ePAMCQR1vXn4NJaUywoIBcUDQnxyLitTEE7NaahsntuR62QE84AAADlSURBVEjHjdbXEoIwEIVhFESlCEi3d837v6AzJl4e/uz1N0PJ5uwGk5WE8TYAsjDGvJkYU0+QZml+tdakdSTMNCmQpCtLqgFJ3kvSlUgiR+JIk9iblJ0kfW7JSpOhciRFUmiShZYsWyaNJOPBkoUHSTRZO3KTZOfI3oNcNTlastFk9icXTZ5MTpbMP0zOmtz9Sa3JA0nwMram8qFAwoaf5YremT+M/yGfBZ8p9wb3GPeqZ8/z3dE1AuK7zJnA2cIZxVnHmcnZqyvKMcN5FvBM4dnEM45nJc9cnt28A/Au4beT8G7zBQdzSZh10g/3AAAAAElFTkSuQmCC");margin-right:10px}
+.link-back:before,.link-forward:after{content:"";display:inline-block;background-repeat:no-repeat;background-size:contain;vertical-align:text-bottom;width:.61111em;height:1.11111em}.link-forward:after{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABACAMAAACnZz6fAAAAflBMVEUAAAAAjOkAc8YAdMYAecoAdMYAc8YAdMYAc8YAc8YAd8kAd8kAfswAc8YAdMYAdMYAdMYAc8YAdMYAdMcAdcgAd8gAdskAd8kAe8wAe9AAgtAAc8YAc8YAdMYAc8YAdcgAdccAdckAdcgAdMcAdMYAdMYAdMcAdMUAd8YAc8XwTFXoAAAAKXRSTlMABPrOG+3c6ePAMCQR1vXn4NJaUywoIBcUDQnxyLitTEE7NaahsntuR62QE84AAADlSURBVEjHpdbXDsIwDIXhQGnppHuxaVl5/xdEIuH2x1V8/UlVE8fHSqkq8GLF9dJa+4xqrf+iSH9r24BJPYtaAcoJDaVBYQKozxagogO0CSzaCFBAqCsMyhCFFvWAEovKgVAuQO3WIC8F1IiQb9BxBBRL0HQwKBKhPaCbCO0MOhG6/tBKgB6E3muDzoQuS9BMqLboLkIKqtKmngKUOxj4FvwYkXnlcoZ8F3yn3BvcY9yrLj0/CYhvyejylhskPFt4RvGs45npMnu7AgY9ZAFmCmeTS8ZxVnLmcnbzDsC7hONOItltPoBXSZjOoXJsAAAAAElFTkSuQmCC");margin-left:10px}
+
+.btn{
+	&-xsmall{border: none; border-radius: 2px; display: inline-block; height: 20px; line-height: 20px; padding-left: 6px; padding-right: 6px; font-size: 8px; text-transform: uppercase; vertical-align: middle; -webkit-tap-highlight-color: transparent;}
+	&-small{border: none; border-radius: 2px; display: inline-block; height: 22px; line-height: 22px; padding-left: 8px; padding-right: 8px; font-size: 12px; §-transform: uppercase; vertical-align: middle; -webkit-tap-highlight-color: transparent;}
+	&-xlarge{border: none; border-radius: 2px; display: inline-block; height: 66px; line-height: 66px; padding-left: 22px; padding-right: 22px; font-size: 22px; text-transform: uppercase; vertical-align: middle; -webkit-tap-highlight-color: transparent;}
+}
+
+.btn-group>.btn{
+	margin-bottom:0;position:relative;-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto;
+	&:not(:first-child){margin-left:-6px !important;}
+}
+
+.btn{
+	&>&.badge{margin-top:7px;border-radius:5px;}
+	&>.badge{margin-top:7px;border-radius:5px;}
+}
+
+@each $color_name, $color in $colors {
+	.btn.btn-outline-{
+		&#{$color_name}{background-color: white; color:#{$color}; border: 1px solid #{$color};}
+		&#{$color_name}:hover{background-color: #{$color}; color:white; border: 1px solid #{$color};}
+		&#{$color_name}>.badge{color:white;}
+		&#{$color_name}:hover>.badge{color: #{$color}; background-color:white !important;}
+	}
+}
+
+.btn-primary{
+	color:#fff;background-color:#007bff;border-color:#007bff;
+	&:hover{color:#fff;background-color:#0069d9;border-color:#0062cc}
+	&:focus,&.focus{box-shadow:0 0 0 .2rem rgba(0,123,255,0.5)}
+	&:disabled,&.disabled{background-color:#007bff;border-color:#007bff}
+	&:not([disabled]):not(.disabled):active,&:not([disabled]):not(.disabled).active,&.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#0062cc;border-color:#005cbf;box-shadow:0 0 0 .2rem rgba(0,123,255,0.5)}
+}
+
+.btn-labeled{
+	padding-top:0px;padding-bottom:10px;padding-top:-10px;
+	&>.btn-content{padding-top:2px;}
+	&>.btn-label{position:relative;background:0 0;background:rgba(0,0,0,.15);display:inline-block;padding-left:10px;padding-top:0px;padding-bottom:0px;padding-right:10px;left:-30px;height:37px;border-radius:3px 0 0 3px}
+}
+
+.btn-default{color:#333;border-color:#ccc;background-color:#fff;background-image:linear-gradient(to bottom, #fff 0, #e0e0e0 100%);background-repeat:repeat-x}
+.btn-block,.btn-group{width:100%}
+.btn-text{display:inline-block;background-color:red}
+.btn-label.btn-label-right{left:auto;right:-30px;border-radius:0 3px 3px 0}
+.btn-large .btn-label,.btn-xlarge .btn-label{padding:10px 16px;left:-16px;border-radius:5px 0 0 5px;&.btn-label-right{left:auto;right:-16px;border-radius:0 5px 5px 0}}
+.btn-small .btn-label{padding:5px 10px;left:-10px;border-radius:2px 0 0 2px;&.btn-label-right{left:auto;right:-10px;border-radius:0 2px 2px 0}}
+.btn-xsmall .btn-label{padding:1px 5px;left:-5px;border-radius:2px 0 0 2px}
+.btn-xssmall .btn-label.btn-label-right{left:auto;right:-5px;border-radius:0 2px 2px 0}

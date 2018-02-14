@@ -1,0 +1,15 @@
+$size:100;
+@while $size > -55 {
+	.p-a-#{$size}{padding:#{$size}px !important;}
+	.p-t-#{$size}{padding-top:#{$size}px !important;}
+	.p-b-#{$size}{padding-bottom:#{$size}px !important;}
+	.p-l-#{$size}{padding-left:#{$size}px !important;}
+	.p-r-#{$size}{padding-right:#{$size}px !important;}
+	.p-x-#{$size}{padding-left:#{$size}px !important;padding-right:#{$size}px !important;}
+	.p-y-#{$size}{padding-top:#{$size}px !important;padding-bottom:#{$size}px !important;}
+  	$size: $size - 5
+}
+@for $i from 1 through 8 {
+	.px-#{$i}{padding-left:#{$i/4}rem !important;padding-right:#{$i/4}rem !important;}
+	.py-#{$i}{padding-top:#{$i/4}rem !important;padding-bottom:#{$i/4}rem !important;}
+}

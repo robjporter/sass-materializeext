@@ -1,0 +1,14 @@
+@for $i from 1 through 8 {
+	.dhr-#{$i}{border-top:#{$i}px dotted;}
+	.border-#{$i}{border-style:solid!important;border-width:#{$i}px;}
+	.border-radius-#{$i}{border-radius:#{$i}px !important;}
+}
+@for $i from 0 through 4 {
+	.borderring-#{$i*5}{padding:#{$i*5}px;background-color:transparent;border:2px solid #000;border-radius:50%;background-clip:border-box}
+}
+.border-left{border-right:0px;border-top:0px;border-bottom:0px;}
+.border-right{border-left:0px;border-top:0px;border-bottom:0px;}
+.border-top{border-left:0px;border-right:0px;border-bottom:0px;}
+.border-bottom{border-left:0px;border-top:0px;border-right:0px;}
+.border-vertical{border-left:0px;border-right:0px;}
+.border-horizontal{border-top:0px;border-bottom:0px;}

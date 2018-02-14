@@ -1,0 +1,8 @@
+@for $i from 1 through 5 {
+	.round-#{$i*5}{border-radius:#{$i*5}px !important;}
+	.round-t-#{$i*5}{border-top-left-radius:#{$i*5}px !important;border-top-right-radius:#{$i*5}px !important;}
+	.round-b-#{$i*5}{border-bottom-left-radius:#{$i*5}px !important;border-bottom-right-radius:#{$i*5}px !important;}
+	.round-l-#{$i*5}{border-top-left-radius:#{$i*5}px !important;border-bottom-left-radius:#{$i*5}px !important;}
+	.round-r-#{$i*5}{border-top-right-radius:#{$i*5}px !important;border-bottom-right-radius:#{$i*5}px !important;}
+}
+.pill{border-radius: 9999px;cursor: pointer;}

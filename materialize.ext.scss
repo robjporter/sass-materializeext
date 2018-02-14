@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+	"components/color",
+	"components/border",
+	"components/font",
+    "components/icons",
+    "components/margins",
+    "components/padding",
+    "components/sizes",
+    "components/images",
+    "components/scale",
+    "components/round",
+    "components/hover",
+    "components/buttons",
+    "components/shadows",
+    "components/gradients",
+    "components/video",
+    "components/jumbotron",
+    "components/forms",
+    "components/zoom",
+    "components/shapes",
+    "components/animations",
+    "components/graphs",
+    "components/links",
+    "components/cards",
+    "components/panels",
+    "components/ribbons",
+    "components/labels",
+    "components/alerts",
+    "components/helpers",
+    "components/charts";
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+// 7. Themes
+@import
+'themes/default';

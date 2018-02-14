@@ -1,0 +1,15 @@
+$size:8;
+@while $size < 100 {
+	.font-#{$size}{font-size:#{$size}px !important;}
+  	$size: $size + 2
+}
+@for $i from 1 through 8 {
+	.font-w-#{$i*100}{font-weight:#{$i*100};}
+}
+.font-italic{font-style:italic;}
+.font-underline{text-decoration:underline;}
+.font-strike-through{text-decoration:line-through;}
+.font-overline{text-decoration:overline;}
+.font-capitalise{text-transform:capitalize !important;}
+.font-uppercase{text-transform:uppercase !important;}
+.font-lowercase{text-transform:lowercase !important;}

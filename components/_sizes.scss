@@ -1,0 +1,13 @@
+$size:5;
+@while $size < 100 {
+	.w#{$size}{width:#{$size}px !important;}
+	.h#{$size}{height:#{$size}px !important;}
+	$size: $size + 5
+}
+
+$size:100;
+@while $size < 1000 {
+	.w#{$size}{width:#{$size}px !important;}
+	.h#{$size}{height:#{$size}px !important;}
+	$size: $size + 100
+}

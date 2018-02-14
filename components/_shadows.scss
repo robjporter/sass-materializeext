@@ -1,0 +1,12 @@
+.shadow{box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;}
+@for $i from 1 through 6 {
+	.shadow-#{$i}{box-shadow: 0 #{$i*2}px #{$i*2+2}px 0 rgba(0,0,0,0.2),0 #{$i*2}px #{$i*2+4}px 0 rgba(0,0,0,0.15);transition: 0.3s;}
+}
+.text-shadow{text-shadow:0 0 25px rgba(0,0,0,.25),1px 1px 1px rgba(0,0,0,.5)}
+@for $i from 1 through 4 {
+	.text-shadow-#{$i}{text-shadow:#{$i}px #{$i}px 5px rgba(0, 0, 0, 0.55);}
+}
+@for $i from 1 through 4 {
+	.shadow-inner-#{$i*5}{-moz-box-shadow:inset 0 0 #{$i*5}px #000;-webkit-box-shadow:inset 0 0 #{$i*5}px #000;box-shadow:inset 0 0 #{$i*5}px #000}
+	.hover-shadow-inner-#{$i*5}:hover{-moz-box-shadow:inset 0 0 #{$i*5}px #000;-webkit-box-shadow:inset 0 0 #{$i*5}px #000;box-shadow:inset 0 0 #{$i*5}px #000}
+}

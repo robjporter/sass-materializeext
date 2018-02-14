@@ -1,0 +1,6 @@
+$size:1;
+@while $size <7 {
+	$scale: "1." + $size;
+	.scale1-#{$size}{transform: scale(#{$scale},#{$scale});}
+	$size: $size + 1
+}

@@ -1,0 +1,10 @@
+$size:100;
+@while $size > -55 {
+	.m-a-#{$size}{margin:#{$size}px !important;}.m-t-#{$size}{margin-top:#{$size}px !important;}
+	.m-b-#{$size}{margin-bottom:#{$size}px !important;}
+	.m-l-#{$size}{margin-left:#{$size}px !important;}
+	.m-r-#{$size}{margin-right:#{$size}px !important;}
+	.m-x-#{$size}{margin-left:#{$size}px !important;margin-right:#{$size}px !important;}
+	.m-y-#{$size}{margin-top:#{$size}px !important;margin-bottom:#{$size}px !important;}
+  	$size: $size - 5
+}

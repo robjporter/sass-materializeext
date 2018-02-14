@@ -1,0 +1,4 @@
+@for $i from 1 through 20 {
+	.min-width-#{$i*10}{min-width:#{$i*10}px;}
+	.min-height-#{$i*10}{min-height:#{$i*10}px;}
+}

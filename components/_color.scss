@@ -1,0 +1,45 @@
+
+
+$colors: (
+	"amber": $amber,
+	"black-cream": $black-cream,
+	"blue": $blue,
+	"blue-grey": $blue-grey,
+	"cisco-blue": $cisco-blue,
+	"cream": $cream,
+	"cyan": $cyan,
+	"dark-grey": $dark-grey,
+	"deep-purple": $deep-purple,
+	"green": $green,
+	"indigo": $indigo,
+	"light-blue": $light-blue,
+	"light-green": $light-green,
+	"light-pink": $light-pink,
+	"light-grey": $light-grey,
+	"orange": $orange,
+	"pale-green": $pale-green,
+	"pink": $pink,
+	"purple": $purple,
+	"red": $red,
+	"white": $white,
+	"black": $black,
+	"warning": $warning,
+	"danger":$danger,
+	"success": $success,
+	"info": $info,
+	"primary": $primary,
+) !default;
+
+@each $color_name, $color in $colors {
+	.#{$color_name}{background-color:$color !important;}
+	.bg-#{$color_name}{background-color:$color !important;}
+	@if($color_name != "white") {
+	.bg-#{$color_name}:hover{background-color:$color !important;}
+	}
+	.hover\:bg-#{$color_name}{background-color:$color !important;}
+	.hover\:bg-#{$color_name}:hover{background-color:$color !important;}
+	.border-#{$color_name}{border: 1px solid #{$color} !important;}
+	.hr-#{$color_name}{display:block;width:100%;height:1px;background:rgba($color, 0.8) transparent;background:rgba(rgba($color, 0.8), 0.8);}
+	.text-#{$color_name}{color:$color !important;}
+	.hover\:text-#{$color_name}:hover{color:$color !important;}
+}
